@@ -1,7 +1,14 @@
+import { Routes, Route } from 'react-router-dom';
+import { MainRoute } from './routes/MainRoute';
+import { Authentication } from './routes/Authentication';
+
 function App() {
   return (
     <>
-      <h1 className="text-4xl font-bold text-blue-500">Hello world</h1>
+      <Routes>
+        <Route path='/' element={<Authentication/>}/>
+        <Route path="/main" element={<MainRoute/>}/>
+      </Routes>
     </>
   )
 }

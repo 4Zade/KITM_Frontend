@@ -20,6 +20,10 @@ export function Navbar({hidden}: Props) {
                 });
     })
 
+    const chats = [
+        'Chat 1', 'Chat 2', 'Chat 3'
+    ]
+
     return (
         <section className={`top-0 left-0 absolute lg:static w-[360px] h-full dark:bg-slate-700 bg-slate-100 p-4 ${hidden && 'hidden'} lg:block`}>
             <main className="w-full h-full">
@@ -37,7 +41,9 @@ export function Navbar({hidden}: Props) {
                     </div>
                 </header>
 
-                <NavCard/>
+                {chats.map((chat, index) => (
+                    <NavCard key={index} label={chat}/>
+                ))}
             </main>
         </section>
     )

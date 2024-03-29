@@ -1,7 +1,11 @@
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
 
-export function NavCard() {
+interface Props {
+    label: string
+}
+
+export function NavCard({label}: Props) {
     const [toDelete, useToDelete] = useState(false);
 
     return (
@@ -11,7 +15,7 @@ export function NavCard() {
             </section>
 
             <section className={`w-64 h-full px-2 `}>
-                <p className={`text truncate font-semibold ${toDelete ? 'w-52' : 'w-60'}`}>Chat 1</p>
+                <p className={`text truncate font-semibold ${toDelete ? 'w-52' : 'w-60'}`}>{label}</p>
             </section>
 
             <section className='w-min h-min'>

@@ -7,8 +7,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Authentication/>}/>
-        <Route path="/main" element={<MainRoute/>}/>
+        <Route path='/auth' element={<Authentication/>}/>
+        <Route path="/" element={<MainRoute/>}/>
         <Route path="/*" element={<NotFound/>}/>
       </Routes>
     </>
